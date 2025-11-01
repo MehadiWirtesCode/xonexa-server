@@ -3,7 +3,7 @@ import pool from "../config/postgreSQL.js";
 export const deleteWishlistItemController = async (req, res) => {
   try {
     const { id, user_id } = req.body;
-
+    console.log(id,user_id);
     if (!id || !user_id) {
       return res.status(400).json({ message: "ID or User ID missing" });
     }
