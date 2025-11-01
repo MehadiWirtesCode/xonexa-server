@@ -25,6 +25,7 @@ import { getBuyedProductListController } from '../controllers/userDashboardContr
 import { uploads } from '../config/cloudinary.js';
 import { setWishlistItemController } from '../controllers/setWishlistItemController.js';
 import { getWishlistItemsController } from '../controllers/getWishlistItemsController.js';
+import { deleteWishlistItemController } from '../controllers/deleteWishlistItemController.js';
 
 
 const productRoutes = express.Router();
@@ -63,6 +64,7 @@ productRoutes.get(`/getusers-order-item/:id`,getUsersOrderItemController);
 productRoutes.get(`/get-buyed-list/:id`,getBuyedProductListController);
 productRoutes.post(`/set-wishlist-item`,setWishlistItemController);
 productRoutes.get(`/get-wishlist-items`,getWishlistItemsController);
+productRoutes.delete(`/delete-wishlist-item`,deleteWishlistItemController);
 
 
 productRoutes.get(`/getproductdetails/:id`, getProductDetailsContainer);
